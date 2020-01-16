@@ -1,0 +1,51 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#header {
+    width: auto;
+    background-color: darkblue;
+    color: white;
+    padding: 1em;
+}
+
+#header h1 {
+    margin: 1em;
+}
+
+#playArea {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 9em);
+    background-color: whitesmoke;
+}
+
+.drag {
+    background-color: whitesmoke;
+    color: darkslategray;
+    font-size: 20px;
+    
+    border-radius: 8px;
+    padding: 20px;
+    user-select: none;
+    touch-action: none;
+  
+    height: 100px;
+    width: 200px;
+  
+    /* This makes things *much* easier */
+    box-sizing: border-box;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
