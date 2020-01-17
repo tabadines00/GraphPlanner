@@ -9,14 +9,27 @@
     </head>
     <body>
         <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
         <div id="header">
             <h1>Graph Planner</h1>
+            <input type="text" id="name" name="name">
+            <input type="button" value="addCards" onclick="addCards(['nice', 'wow', 'yikes', 'woohoo'])">
         </div>
 
         <div id="playArea">
-            <div class="drag card"> Draggable Element </div>
+            <div class="drag card noselect"> Draggable Element </div>
+        </div>
+
+        <div class="modal" onclick="modal.style.display = 'none'">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h1>Card Title</h1>
+                <p>Card text description</p>
+
+            </div>
         </div>
 
         <script src="./js/dragBox.js"></script>
+        <script src="./js/cardManager.js"></script>
     </body>
 </html>

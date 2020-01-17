@@ -47,9 +47,10 @@ interact('.drag')
         target.setAttribute('data-y', y)
       })
       .on('tap', function (event) {
-        alert("youve been tapped!")
+        modal.style.display = "block"
         event.preventDefault()
       })
+      
 
 function dragMoveListener (event) {
     var target = event.target
@@ -68,3 +69,15 @@ function dragMoveListener (event) {
 }
 
 window.dragMoveListener = dragMoveListener
+
+let modal = document.querySelector(".modal")
+let closeBtn = document.querySelector(".close-btn")
+
+closeBtn.onclick = function(){
+  modal.style.display = "none"
+}
+window.onclick = function(e){
+  if(e.target == modal){
+    modal.style.display = "none"
+  }
+}
